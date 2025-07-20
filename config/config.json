@@ -1,0 +1,27 @@
+{
+    "source_directories": ["~/CleanMate/test_files"],
+    "destination_directory": "~/CleanMate/Organized",
+    "file_categories": {
+        "Documents": [".pdf", ".docx", ".doc", ".txt", ".rtf", ".odt"],
+        "Images": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".webp"],
+        "Videos": [".mp4", ".mov", ".avi", ".mkv", ".wmv", ".flv"],
+        "Audio": [".mp3", ".wav", ".aac", ".flac", ".ogg"],
+        "Code": [".py", ".js", ".html", ".css", ".java", ".cpp", ".c", ".go", ".rb", ".php"],
+        "Archives": [".zip", ".rar", ".tar", ".gz", ".7z"],
+        "Presentations": [".ppt", ".pptx", ".key"],
+        "Spreadsheets": [".xls", ".xlsx", ".csv", ".numbers"],
+        "PDFs": [".pdf"]
+    },
+    "ignore_patterns": [
+        "^\\.",
+        "^~\\$",
+        "^Thumbs\\.db$",
+        "^desktop\\.ini$"
+    ],
+    "summarize_extensions": [".pdf", ".txt", ".docx"],
+    "max_file_size_for_summary_mb": 10,
+    "organize_by_content": true,
+    "smart_rename": true,
+    "keep_original_name": true,
+    "create_summary_file": true
+}
