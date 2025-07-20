@@ -129,9 +129,6 @@ Amazon Q CLI was instrumental in building CleanMate:
 
 4. **Error Handling**: Amazon Q helped implement robust error handling and logging.
 
-## Screenshots
-
-[Include screenshots of CleanMate in action]
 
 ## Future Enhancements
 
@@ -140,14 +137,4 @@ Amazon Q CLI was instrumental in building CleanMate:
 - GUI interface for easier configuration
 - Support for more file types and languages
 
-## License
 
-MIT
-
-## Author
-
-Rahul Kothuri
-
----
-
-*This project was created for the AWS Q Developer Challenge #1 (July 2025)*
