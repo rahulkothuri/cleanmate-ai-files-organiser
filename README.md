@@ -10,7 +10,7 @@ Digital clutter across desktops and Downloads folders leads to disorganization, 
 
 - **Automatic File Organization**: Scans and moves files into smart folders (e.g., PDFs, Images, Videos, Code, etc.) based on file type.
   
-- **Content-Based Intelligence**: Uses AWS Q Developer CLI to summarize the content of supported files (PDFs, TXT, DOCX) and intelligently suggest or rename folders (e.g., "Project Reports", "Assignments", "Bills").
+- **Content-Based Intelligence**: Uses Amazon Q CLI to summarize the content of supported files (PDFs, TXT, DOCX) and intelligently suggest or rename folders (e.g., "Project Reports", "Assignments", "Bills").
   
 - **Cleanup Tracking**: Maintains a cleanup log with timestamps and summary reports.
   
@@ -20,8 +20,8 @@ Digital clutter across desktops and Downloads folders leads to disorganization, 
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/cleanmate.git
-   cd cleanmate
+   git clone https://github.com/rahulkothuri/cleanmate-ai-files-organiser.git
+   cd cleanmate-ai-files-organiser
    ```
 
 2. Make sure you have Python 3.6+ installed.
@@ -31,12 +31,12 @@ Digital clutter across desktops and Downloads folders leads to disorganization, 
    pip install -r requirements.txt
    ```
 
-4. Make the script executable:
+4. Make the scripts executable:
    ```
-   chmod +x src/cleanmate.py
+   chmod +x src/cleanmate.py src/schedule_cleanmate.py
    ```
 
-5. Make sure you have AWS Q Developer CLI installed and configured.
+5. Make sure you have Amazon Q CLI installed and configured.
 
 ## Usage
 
@@ -62,20 +62,34 @@ python src/cleanmate.py --source ~/Downloads
 
 # Specify both source and destination folders
 python src/cleanmate.py --source ~/Downloads --dest ~/Organized_Files
+
+# Clean up your Downloads folder and keep files organized within it
+python src/cleanmate.py --source ~/Downloads --dest ~/Downloads/Organized
 ```
 
-### Scheduling with Cron
+### Important Note
 
-To run CleanMate automatically every day at 8 PM:
+CleanMate now **moves** files instead of copying them. This means files will be removed from their original location and placed in the organized folders. Make sure you're aware of this behavior before running the tool.
+
+### Scheduling Regular Cleanups
+
+You can use the included scheduling helper to set up regular cleanups:
 
 ```bash
-crontab -e
-```
+# Schedule daily cleanup
+python src/schedule_cleanmate.py add daily
 
-Add the following line:
+# Schedule weekly cleanup
+python src/schedule_cleanmate.py add weekly
 
-```
-0 20 * * * /path/to/cleanmate/src/cleanmate.py
+# Schedule with a specific time (e.g., 10:30 PM)
+python src/schedule_cleanmate.py add daily --time 22:30
+
+# List scheduled cleanups
+python src/schedule_cleanmate.py list
+
+# Remove scheduled cleanups
+python src/schedule_cleanmate.py remove
 ```
 
 ## Configuration
@@ -97,23 +111,23 @@ Key configuration options:
 
 2. **Categorization**: Files are first categorized by their extension (e.g., .pdf, .jpg, .mp4).
 
-3. **Content Analysis**: For supported file types, CleanMate uses AWS Q Developer CLI to generate a summary of the file's content.
+3. **Content Analysis**: For supported file types, CleanMate uses Amazon Q CLI to generate a summary of the file's content.
 
 4. **Smart Organization**: Based on the content summary, CleanMate suggests appropriate folder names and organizes files accordingly.
 
 5. **Reporting**: A detailed report is generated after each run, showing statistics and organization details.
 
-## How AWS Q Developer Helped
+## How Amazon Q Helped
 
-AWS Q Developer CLI was instrumental in building CleanMate:
+Amazon Q CLI was instrumental in building CleanMate:
 
-1. **Content Summarization**: Q Developer analyzes file content to create concise summaries.
+1. **Content Summarization**: Amazon Q analyzes file content to create concise summaries.
 
-2. **Intelligent Folder Naming**: Q Developer suggests appropriate folder names based on file content.
+2. **Intelligent Folder Naming**: Amazon Q suggests appropriate folder names based on file content.
 
-3. **Code Development**: Q Developer assisted in writing efficient Python code and handling edge cases.
+3. **Code Development**: Amazon Q assisted in writing efficient Python code and handling edge cases.
 
-4. **Error Handling**: Q Developer helped implement robust error handling and logging.
+4. **Error Handling**: Amazon Q helped implement robust error handling and logging.
 
 ## Screenshots
 
@@ -132,7 +146,7 @@ MIT
 
 ## Author
 
-Your Name
+Rahul Kothuri
 
 ---
 
