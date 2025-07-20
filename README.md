@@ -43,7 +43,7 @@ Digital clutter across desktops and Downloads folders leads to disorganization, 
 ### Basic Usage
 
 ```bash
-python src/cleanmate.py
+python src/cleanmate.py --source path --dest path
 ```
 
 This will organize files from your Desktop and Downloads folders (default) into the `~/CleanMate/Organized` directory.
@@ -69,7 +69,8 @@ python src/cleanmate.py --source ~/Downloads --dest ~/Downloads/Organized
 
 ### Important Note
 
-CleanMate now **moves** files instead of copying them. This means files will be removed from their original location and placed in the organized folders. Make sure you're aware of this behavior before running the tool.
+CleanMate now **moves** files instead of copying them. This means files will be removed from their original location and placed in the organized folders. Make sure you're aware of this behavior before running the tool. 
+You can check the logs of the cleanmate for every cleanup in the cleanmate/logs folder.
 
 ### Scheduling Regular Cleanups
 
@@ -129,6 +130,9 @@ Amazon Q CLI was instrumental in building CleanMate:
 
 4. **Error Handling**: Amazon Q helped implement robust error handling and logging.
 
+## Screenshots
+
+
 
 ## Future Enhancements
 
@@ -136,5 +140,3 @@ Amazon Q CLI was instrumental in building CleanMate:
 - Machine learning to improve folder suggestions over time
 - GUI interface for easier configuration
 - Support for more file types and languages
-
-
