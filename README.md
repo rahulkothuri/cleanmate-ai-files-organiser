@@ -131,7 +131,10 @@ Amazon Q CLI was instrumental in building CleanMate:
 4. **Error Handling**: Amazon Q helped implement robust error handling and logging.
 
 ## Screenshots
-
+<img width="914" height="602" alt="before-org" src="https://github.com/user-attachments/assets/5103d931-7cdf-4bca-833d-c69e9221400d" />
+<img width="1326" height="712" alt="terminal" src="https://github.com/user-attachments/assets/35c437b4-6e09-4cc4-b20a-da2c5099261a" />
+<img width="915" height="604" alt="after-org" src="https://github.com/user-attachments/assets/94f26eb4-8f7a-43d8-a10e-d1eaeb89dd7b" />
+<img width="640" height="414" alt="report" src="https://github.com/user-attachments/assets/064c32ed-3e66-4fe3-8c39-e553cace7aee" />
 
 
 ## Future Enhancements
